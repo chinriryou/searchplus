@@ -866,9 +866,11 @@ typedef sptr_t (*SciFnDirect)(sptr_t ptr, unsigned int iMessage, uptr_t wParam, 
 namespace Scintilla {
 #endif
 
+using PositionCR = intptr_t;
+
 struct Sci_CharacterRange {
-	long cpMin;
-	long cpMax;
+	PositionCR cpMin;
+	PositionCR cpMax;
 };
 
 struct Sci_TextRange {
